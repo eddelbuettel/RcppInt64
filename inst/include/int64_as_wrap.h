@@ -57,11 +57,12 @@ namespace Rcpp {
 // define template specialisation for as and wrap
 namespace Rcpp {
 
-    template <> std::vector<int64_t> as(SEXP s) {
-        Rcpp::NumericVector v(s);
+    template <> std::vector<int64_t> as(SEXP sxp) {
+        Rcpp::NumericVector v(sxp);
         if (!v.hasAttribute("class"))
             Rcpp::stop("Object not classed, expected S3 class 'integer64'");
-        if (std::string(v.attr("class")) != "integer64")
+        std::string str = v.attr("class");
+        if (str != "integer64")
             Rcpp::stop("Object not 'integer64' class");
 
         size_t len = v.size();
