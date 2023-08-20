@@ -19,7 +19,7 @@
 namespace Rcpp {
 
 //
-// Assertions
+// Assertion
 //
 
 // Check for integer64 type -- which for R 'S3' object means checking the attributes
@@ -31,7 +31,7 @@ inline bool isInteger64(Rcpp::NumericVector v) {
     return s == "integer64";
 }
 
-// cannot easily do the scalar case as the 'doube' is a plain old datatype
+// cannot easily do the scalar case as the 'double' is a plain old datatype
 // that cannot carry a class attribute as an R SEXP (and hence Rcpp type) could
 
 
@@ -46,7 +46,7 @@ inline Rcpp::NumericVector toInteger64(const std::vector<int64_t>& v) {
 
     // transfers values 'keeping bits' (via memcpy) but changing type
     // using reinterpret_cast would get us a warning for casting
-    std::memcpy(&(n[0]), &(v[0]), len * sizeof(double));
+    std::memcpy(n.begin(), v.data(), len * sizeof(double));
 
     // set the R class to 'integer64' so that this is not seen as a double
     n.attr("class") = "integer64";
@@ -58,7 +58,7 @@ inline Rcpp::NumericVector toInteger64(const int64_t& v) {
     Rcpp::NumericVector n(1);
     // transfers values 'keeping bits' (via memcpy) but changing type
     // using reinterpret_cast would get us a warning for casting
-    std::memcpy(&(n[0]), &v, sizeof(double));
+    std::memcpy(n.begin(), &v, sizeof(double));
 
     // set the R class to 'integer64' so that this is not seen as a double
     n.attr("class") = "integer64";
@@ -80,7 +80,7 @@ inline std::vector<int64_t> fromInteger64(Rcpp::NumericVector v, bool check = tr
 
     // transfers values 'keeping bits' (via memcpy) but changing type
     // using reinterpret_cast would get us a warning for casting
-    std::memcpy(&(n[0]), &(v[0]), len * sizeof(double));
+    std::memcpy(n.data(), v.begin(), len * sizeof(double));
 
     return n;
 }
@@ -104,9 +104,8 @@ inline int64_t fromInteger64(SEXP val) {
 
     // cannot but really should check val for class
     int64_t newval;
-    memcpy(&newval, &(v[0]), sizeof(double));
+    memcpy(&newval, v.begin(), sizeof(double));
     return newval;
 }
-
 
 }
