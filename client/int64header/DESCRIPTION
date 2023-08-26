@@ -1,0 +1,13 @@
+Package: int64header
+Type: Package
+Title: Show use of RcppInt64 via the C++ Header
+Version: 0.0.1
+Date: 2023-08-26
+Author: Dirk Eddelbuettel
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Description: Demonstration of how to access the RcppInt64 package via its C++ header.
+  After installing the package, run 'example("Int64toInt64", package="int64header")'.
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.11)
+LinkingTo: Rcpp, RcppInt64
+RoxygenNote: 6.0.1
