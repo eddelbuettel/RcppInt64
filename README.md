@@ -1,11 +1,11 @@
 
 ## RcppInt64: Rcpp Bindings for Passing integer64 Variables To And From C++
 
-[![CI](https://github.com/eddelbuettel/rcppint64/workflows/ci/badge.svg)](https://github.com/eddelbuettel/rcppint64/actions?query=workflow%3Aci)
+[![CI](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml/badge.svg)](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml)
 [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/rcppint64)](https://github.com/eddelbuettel/rcppint64)
 <!-- [![CRAN](https://www.r-pkg.org/badges/version/Rcppint64)](https://cran.r-project.org/package=Rcppint64) -->
 <!-- [![Dependencies](https://tinyverse.netlify.com/badge/Rcppint64)](https://cran.r-project.org/package=Rcppint64) -->
-[![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/rcppint64)](https://github.com/eddelbuettel/rcppint64)
 
 ### Motivation
 
