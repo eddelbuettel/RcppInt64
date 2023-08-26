@@ -1,5 +1,5 @@
 
-#include "RcppInt64.h"
+#include "RcppInt64Header.h"
 
 // [[Rcpp::depends(RcppInt64)]]
 
