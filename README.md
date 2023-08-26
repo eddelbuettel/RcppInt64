@@ -1,5 +1,5 @@
 
-## RcppInt64: Rcpp Bindings for Passing integer64 Variables To And From C++
+## RcppInt64: Bindings for Passing integer64 To And From C++
 
 [![CI](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml/badge.svg)](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml)
 [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
