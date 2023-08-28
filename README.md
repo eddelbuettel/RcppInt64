@@ -4,13 +4,13 @@
 [![CI](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml/badge.svg)](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml)
 [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/rcppint64)](https://github.com/eddelbuettel/rcppint64)
-<!-- [![CRAN](https://www.r-pkg.org/badges/version/Rcppint64)](https://cran.r-project.org/package=Rcppint64) -->
-<!-- [![Dependencies](https://tinyverse.netlify.com/badge/Rcppint64)](https://cran.r-project.org/package=Rcppint64) -->
+<!-- [![CRAN](https://www.r-pkg.org/badges/version/RcppInt64)](https://cran.r-project.org/package=RcppInt64) -->
+<!-- [![Dependencies](https://tinyverse.netlify.com/badge/RcppInt64)](https://cran.r-project.org/package=RcppInt64) -->
 
 ### Motivation
 
 While has no _native_ support for 64-bit integer values, the [`bit64`
-package](https://cloud.r-project.org/web/packages/bit64/index.html) by Jens Oehlschlägel is widely
+package](https://cran.r-project.org/package=bit64) by Jens Oehlschlägel is widely
 used to fill this gap by (very carefully) passing the bitmaps of `int64_t` values around in
 `double`.  This works on the R side by virtue of a S3 call `integer64`, on the C/C++ side the values
 can be past by `memcpy`.   What one cannot do is simply copying or casting: the tradeoff made in
