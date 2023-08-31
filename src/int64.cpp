@@ -1,5 +1,5 @@
 
-#include "RcppInt64Header.h"
+#include "RcppInt64"
 
 //' Integer64 to Integer64 round-trip demo
 //'
