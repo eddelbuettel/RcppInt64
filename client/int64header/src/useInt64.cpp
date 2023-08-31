@@ -1,6 +1,6 @@
 
 // The RcppInt64 header also imports Rcpp/Lightest
-#include <RcppInt64.h>
+#include <RcppInt64>
 
 //' Integer64 to Integer64 round-trip demo
 //'

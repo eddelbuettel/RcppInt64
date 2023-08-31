@@ -8,6 +8,6 @@ Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: Demonstration of how to access the RcppInt64 package via its C++ header.
   After installing the package, run 'example("Int64toInt64", package="int64header")'.
 License: GPL (>= 2)
-Imports: Rcpp (>= 1.0.11)
+Imports: Rcpp (>= 1.0.11), bit64
 LinkingTo: Rcpp, RcppInt64
 RoxygenNote: 6.0.1

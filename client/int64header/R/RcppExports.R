@@ -16,6 +16,6 @@
 #' # pass them to function which will add one to each, print  and return
 #' Int64toInt64(v)
 Int64toInt64 <- function(vec) {
-    .Call(`_int64_header_Int64toInt64`, vec)
+    .Call(`_int64header_Int64toInt64`, vec)
 }
 

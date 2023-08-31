@@ -1,3 +1,4 @@
 useDynLib(int64header, .registration=TRUE)
 importFrom(Rcpp, evalCpp)
+importFrom(bit64, as.integer64)
 exportPattern("^[[:alpha:]]+")

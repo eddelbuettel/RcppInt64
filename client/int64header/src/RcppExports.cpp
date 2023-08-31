@@ -12,7 +12,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // Int64toInt64
 Rcpp::NumericVector Int64toInt64(Rcpp::NumericVector vec);
-RcppExport SEXP _int64_header_Int64toInt64(SEXP vecSEXP) {
+RcppExport SEXP _int64header_Int64toInt64(SEXP vecSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -23,11 +23,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_int64_header_Int64toInt64", (DL_FUNC) &_int64_header_Int64toInt64, 1},
+    {"_int64header_Int64toInt64", (DL_FUNC) &_int64header_Int64toInt64, 1},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_int64_header(DllInfo *dll) {
+RcppExport void R_init_int64header(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
