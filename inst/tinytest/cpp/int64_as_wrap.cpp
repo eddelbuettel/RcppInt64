@@ -1,5 +1,5 @@
 
-#include "int64_as_wrap.h"
+#include "RcppInt64"
 
 // [[Rcpp::depends(RcppInt64)]]
 

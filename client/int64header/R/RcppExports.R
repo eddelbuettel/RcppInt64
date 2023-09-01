@@ -19,3 +19,8 @@ Int64toInt64 <- function(vec) {
     .Call(`_int64header_Int64toInt64`, vec)
 }
 
+#' @rdname Int64toInt64
+Int64toInt64Alt <- function(vec) {
+    .Call(`_int64header_Int64toInt64Alt`, vec)
+}
+
