@@ -23,3 +23,12 @@ Rcpp::NumericVector Int64toInt64(Rcpp::NumericVector vec) {
         Rcpp::Rcout << ++e << std::endl;
     return Rcpp::toInteger64(nvec);
 }
+
+//' @rdname Int64toInt64
+// [[Rcpp::export]]
+SEXP Int64toInt64Alt(Rcpp::NumericVector vec) {
+    std::vector<int64_t> nvec = Rcpp::as<std::vector<int64_t>>(vec);
+    for (auto& e: nvec)
+        Rcpp::Rcout << ++e << std::endl;
+    return Rcpp::wrap(nvec);
+}

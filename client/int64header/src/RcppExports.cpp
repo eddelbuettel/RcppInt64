@@ -21,9 +21,21 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// Int64toInt64Alt
+SEXP Int64toInt64Alt(Rcpp::NumericVector vec);
+RcppExport SEXP _int64header_Int64toInt64Alt(SEXP vecSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type vec(vecSEXP);
+    rcpp_result_gen = Rcpp::wrap(Int64toInt64Alt(vec));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_int64header_Int64toInt64", (DL_FUNC) &_int64header_Int64toInt64, 1},
+    {"_int64header_Int64toInt64Alt", (DL_FUNC) &_int64header_Int64toInt64Alt, 1},
     {NULL, NULL, 0}
 };
 
