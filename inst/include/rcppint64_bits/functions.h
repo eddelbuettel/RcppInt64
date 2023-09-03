@@ -1,4 +1,3 @@
-
 // Header-library to provide 'int64' conversion between R and C++
 //
 // It relies on the bit64 package and its s3 type integer64 which use
@@ -13,6 +12,11 @@
 // https://gallery.rcpp.org/articles/creating-integer64-and-nanotime-vectors/
 // which also details the use from the nanotime package (which also
 // relies in bit64::integer64)
+
+// Additional helper to assert integer64 source, and conversion to and
+// from for both vector and scalar cases
+
+#pragma once
 
 #include <Rcpp/Lightest>
 

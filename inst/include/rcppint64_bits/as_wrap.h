@@ -1,5 +1,21 @@
-#ifndef RCPP_INT64_AS_WRAP_H_
-#define RCPP_INT64_AS_WRAP_H_
+// Header-library to provide 'int64' conversion between R and C++
+//
+// It relies on the bit64 package and its s3 type integer64 which use
+// a variable stored as 'double' to transport the int64_t type it
+// represents, along with proper type casting methods.
+//
+// One key aspect is that the 'double' (or in Rcpp parlance the
+// 'NumericVector' must carry the R class attribute so that the
+// payload is taken---and interpreted---as a int64.
+//
+// The processing was described earlier in an Rcpp Gallery piece at
+// https://gallery.rcpp.org/articles/creating-integer64-and-nanotime-vectors/
+// which also details the use from the nanotime package (which also
+// relies in bit64::integer64)
+//
+// This header provides standard Rcpp::as<T>(sexpvar) and
+// Rcpp::wrap(int64var) functions
+
 
 // Limited Support for as<>() and wrap()
 //
@@ -38,6 +54,8 @@
 // a C type such as `double`, one cannot "mark" values as being
 // `integer64` which opens the door to accidental conversions. So this
 // use is not supported here.
+
+#pragma once
 
 #include <RcppCommon.h>
 
@@ -89,5 +107,3 @@ namespace Rcpp {
     }
 
 }
-
-#endif

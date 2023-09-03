@@ -9,17 +9,19 @@
 
 ### Motivation
 
-While has no _native_ support for 64-bit integer values, the [`bit64`
-package](https://cran.r-project.org/package=bit64) by Jens Oehlschlägel is widely
-used to fill this gap by (very carefully) passing the bitmaps of `int64_t` values around in
-`double`.  This works on the R side by virtue of a S3 call `integer64`, on the C/C++ side the values
-can be past by `memcpy`.   What one cannot do is simply copying or casting: the tradeoff made in
-representing a `double` with as large a range is that the 'delta' between values is not constant
-acros the range and naive casting between both representation *will* be lossy and distort values.
+While R has no _native_ support for 64-bit integer values, the [`bit64`
+package](https://cran.r-project.org/package=bit64) by Jens Oehlschlägel is widely used to fill this
+gap by (very carefully) passing the bitmaps of `int64_t` values around in `double`.  This works on
+the R side by virtue of a S3 class `integer64` with proper dispatching, and on the C/C++ side where
+the values can be past by `memcpy`.  What one cannot do is simply copying or casting: the tradeoff
+made in representing a `double` with as large a range is that the 'delta' between values is not
+constant acros the range and naive casting between both representation *will* be lossy and distort
+values.
 
-This package contains a handful of very simple helper functions previously floating around in helper
-header files in different packages, and reorganizes them along with a few proper unit tests.  The
-header provided here can be included directly.
+This package contains helper functions that were previously appearing in helper header files in
+different packages, and reorganizes them along with a proper unit tests.  The key header file
+provided here can be included directly. Function to assert `integer64` source, convert to and from
+in both scalar and vector cases as well as a pair of `as<>()` and `wrap()` converters are provided.
 
 ## Example
 
