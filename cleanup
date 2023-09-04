@@ -1,5 +1,5 @@
 #!/bin/sh
 
 rm -f src/*.o src/*.so src/*.dll \
-   client/*/src/*.o client/*/src/*.so client/*/src/*.dll \
-   client/*/int64*_*.tar.gz
+   inst/client/*/src/*.o inst/client/*/src/*.so inst/client/*/src/*.dll \
+   inst/client/*/int64*_*.tar.gz
