@@ -1,5 +1,7 @@
 2023-09-06  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Roll micro relase and date
+
 	* DESCRIPTION (Suggests): Move bit64 to Suggests
 	* NAMESPACE: Remove bit64 import
 	* src/int64.cpp: Make bit64 use conditional in example

@@ -1,8 +1,8 @@
 Package: RcppInt64
 Type: Package
 Title: 'Rcpp'-Based Helper Functions to Pass 'Int64' Values Between 'R' and 'C++'
-Version: 0.0.1
-Date: 2023-09-04
+Version: 0.0.1.1
+Date: 2023-09-06
 Authors@R: c(person(given = "Dirk", family = "Eddelbuettel",
                     role = c("aut", "cre"), email = "edd@debian.org",
                     comment = c(ORCID = "0000-0001-6419-907X")))
