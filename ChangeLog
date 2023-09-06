@@ -1,5 +1,16 @@
+2023-09-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Suggests): Move bit64 to Suggests
+	* NAMESPACE: Remove bit64 import
+	* src/int64.cpp: Make bit64 use conditional in example
+	* R/RcppExports.R: Ditto
+	* man/Int64toInt64.Rd: Ditto
+	* inst/tinytest/test-int64.R: Make bit64 use conditional
+	* inst/tinytest/test-as-wrap.R: Ditto
+
 2023-09-05  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Url, BugReports): Add two fields
 	* README.md: Add two badges now that package is on CRAN
 
 2023-09-04  Dirk Eddelbuettel  <edd@debian.org>

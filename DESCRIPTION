@@ -10,9 +10,11 @@ Description: 'Int64' values can be created and accessed via the 'bit64' package 
  class which package the 'int64' representation cleverly into a 'double'. This packages helps
  conversions between 'R' and 'C++' via several helper functions provided via a single header file.
  A complete example client package is included as an illustration.
+URL: https://github.com/eddelbuettel/rcppint64
+BugReports: https://github.com/eddelbuettel/rcppint64/issues
 License: GPL (>= 2)
-Imports: Rcpp (>= 1.0.8), bit64
+Imports: Rcpp (>= 1.0.8)
 LinkingTo: Rcpp
-Suggests: tinytest
+Suggests: tinytest, bit64
 RoxygenNote: 6.0.1
 Encoding: UTF-8

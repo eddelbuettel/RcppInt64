@@ -1,3 +1,6 @@
+if (!requireNamespace("bit64", quietly=TRUE)) {
+    exit_file("Test needs bit64")
+}
 
 suppressMessages({
     library(bit64)

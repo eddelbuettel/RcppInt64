@@ -12,9 +12,11 @@
 #' increased by one
 #' @examples
 #' # generate all powers of 10 fro 0 .. 18
-#' v <- bit64::as.integer64(10^seq(0,18))
-#' # pass them to function which will add one to each, print  and return
-#' Int64toInt64(v)
+#' if (requireNamespace("bit64", quietly=TRUE)) {
+#'     v <- bit64::as.integer64(10^seq(0,18))
+#'     # pass them to function which will add one to each, print  and return
+#'     Int64toInt64(v)
+#' }
 Int64toInt64 <- function(vec) {
     .Call(`_RcppInt64_Int64toInt64`, vec)
 }
