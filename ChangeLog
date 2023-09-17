@@ -1,3 +1,17 @@
+2023-09-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/rcppint64_bits/functions.h: Add support for nanotime
+	conversions
+	* inst/tinytest/test-nanotime.R: Add tests
+	* inst/tinytest/cpp/nanotime_tests.cpp: Idem
+
+
+	* DESCRIPTION (Suggests): Add Suggests: for nanotime, extend Description:
+
+2023-09-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/rcppint64_bits/as_wrap.h: Make functions inline
+
 2023-09-12  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Release 0.0.2

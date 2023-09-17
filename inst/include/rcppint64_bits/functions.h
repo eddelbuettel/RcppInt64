@@ -1,4 +1,5 @@
-// Header-library to provide 'int64' conversion between R and C++
+// Header-library to provide 'int64' (and 'nanotime') conversion
+// between R and C++
 //
 // It relies on the bit64 package and its s3 type integer64 which use
 // a variable stored as 'double' to transport the int64_t type it
@@ -111,5 +112,88 @@ inline int64_t fromInteger64(SEXP val) {
     memcpy(&newval, v.begin(), sizeof(double));
     return newval;
 }
+
+
+// Check for nanotime type -- which for R object means checking the attributes
+inline bool isNanotime(Rcpp::NumericVector v) {
+    if (!v.hasAttribute("class")) {
+        return FALSE;
+    }
+    std::string c = v.attr("class");
+    std::string s = v.attr(".S3Class");
+    return c == "nanotime" && s == "integer64";
+}
+
+
+// Create a nanotime object (an S4 class object) by invoking an
+// existing R macro along with proper class attributes.
+inline Rcpp::NumericVector toNanotime(const std::vector<int64_t>& v) {
+    size_t len = v.size();
+    Rcpp::NumericVector n(len);
+    std::memcpy(n.begin(), v.data(), len * sizeof(double));
+
+    Rcpp::CharacterVector cl = Rcpp::CharacterVector::create("nanotime");
+    cl.attr("package") = "nanotime";
+
+    n.attr(".S3Class") = "integer64";
+    n.attr("class") = cl;
+    SET_S4_OBJECT(n);
+
+    return(n);
+}
+
+// Create a nanotime (scalar) object (an S4 class object)
+inline Rcpp::NumericVector toNanotime(const int64_t& v) {
+    Rcpp::NumericVector n(1);
+    // transfers values 'keeping bits' (via memcpy) but changing type
+    // using reinterpret_cast would get us a warning for casting
+    std::memcpy(n.begin(), &v, sizeof(double));
+
+    Rcpp::CharacterVector cl = Rcpp::CharacterVector::create("nanotime");
+    cl.attr("package") = "nanotime";
+
+    n.attr(".S3Class") = "integer64";
+    n.attr("class") = cl;
+    SET_S4_OBJECT(n);
+
+    return(n);
+}
+
+
+// Convert from an C++ int64_t vector to an R 'integer64' vector
+inline std::vector<int64_t> fromNanotime(Rcpp::NumericVector v, bool check = true) {
+    if (check && !isNanotime(v))
+        Rcpp::stop("Incoming argument 'v' should be a 'nanotime' type");
+
+    size_t len = v.size();
+    std::vector<int64_t> n(len);         // storage vehicle we return them in
+
+    // transfers values 'keeping bits' (via memcpy) but changing type
+    // using reinterpret_cast would get us a warning for casting
+    std::memcpy(n.data(), v.begin(), len * sizeof(double));
+
+    return n;
+}
+
+// Convert a scalar nanotime 'double' (ie R 'integer64') to a scalar int64_t
+inline int64_t fromNanotime(const double val) {
+    // cannot but really should check val for class
+    int64_t newval;
+    memcpy(&newval, &val, sizeof(double));
+    return newval;
+}
+
+// Convert a scalar 'double' (ie R 'integer64') to a scalar int64_t
+inline int64_t fromNanotime(SEXP val) {
+    // could check for length 1 here
+    Rcpp::NumericVector v(val);
+    if (!isNanotime(v)) Rcpp::stop("Expecting 'nanotime'");
+
+    // cannot but really should check val for class
+    int64_t newval;
+    memcpy(&newval, v.begin(), sizeof(double));
+    return newval;
+}
+
 
 }

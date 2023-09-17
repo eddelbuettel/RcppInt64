@@ -1,20 +1,21 @@
 Package: RcppInt64
 Type: Package
-Title: 'Rcpp'-Based Helper Functions to Pass 'Int64' Values Between 'R' and 'C++'
-Version: 0.0.2
-Date: 2023-09-12
+Title: 'Rcpp'-Based Helper Functions to Pass 'Int64' and 'nanotime' Values Between 'R' and 'C++'
+Version: 0.0.2.1
+Date: 2023-09-17
 Authors@R: c(person(given = "Dirk", family = "Eddelbuettel",
                     role = c("aut", "cre"), email = "edd@debian.org",
                     comment = c(ORCID = "0000-0001-6419-907X")))
 Description: 'Int64' values can be created and accessed via the 'bit64' package and its 'integer64'
- class which package the 'int64' representation cleverly into a 'double'. This packages helps
- conversions between 'R' and 'C++' via several helper functions provided via a single header file.
- A complete example client package is included as an illustration.
+ class which package the 'int64' representation cleverly into a 'double'. The 'nanotime' packages
+ builds on this to support nanosecond-resolution timestamps. This packages helps conversions between
+ 'R' and 'C++' via several helper functions provided via a single header file.  A complete example
+ client package is included as an illustration.
 URL: https://github.com/eddelbuettel/rcppint64
 BugReports: https://github.com/eddelbuettel/rcppint64/issues
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.8)
 LinkingTo: Rcpp
-Suggests: tinytest, bit64
+Suggests: tinytest, bit64, nanotime
 RoxygenNote: 6.0.1
 Encoding: UTF-8

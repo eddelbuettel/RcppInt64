@@ -62,12 +62,12 @@
 namespace Rcpp {
 
     // non-intrusive extension via template specialisation
-    template <> std::vector<int64_t> as(SEXP v);
+    template <> inline std::vector<int64_t> as(SEXP v);
     // maybe want scalar double too ?
     //template <> int64_t as(double);
 
     // non-intrusive extension via template specialisation
-    template <> SEXP wrap(const std::vector<int64_t>& v);
+    template <> inline SEXP wrap(const std::vector<int64_t>& v);
 }
 
 #include <Rcpp.h>
@@ -75,7 +75,7 @@ namespace Rcpp {
 // define template specialisation for as and wrap
 namespace Rcpp {
 
-    template <> std::vector<int64_t> as(SEXP sxp) {
+    template <> inline std::vector<int64_t> as(SEXP sxp) {
         Rcpp::NumericVector v(sxp);
         if (!v.hasAttribute("class"))
             Rcpp::stop("Object not classed, expected S3 class 'integer64'");
@@ -93,7 +93,7 @@ namespace Rcpp {
         return n;
     }
 
-    template <> SEXP wrap(const std::vector<int64_t> &v) {
+    template <> inline SEXP wrap(const std::vector<int64_t> &v) {
         size_t len = v.size();
         Rcpp::NumericVector n(len);         // storage vehicle we return them in
 
