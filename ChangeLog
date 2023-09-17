@@ -16,6 +16,8 @@
 	* src/int64.cpp: Correct one-char typo in documentation
 	* man/Int64toInt64.Rd: Ditto
 
+	* README.md: Expanded README.md
+
 2023-09-16  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/include/rcppint64_bits/as_wrap.h: Make functions inline
