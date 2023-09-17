@@ -5,8 +5,16 @@
 	* inst/tinytest/test-nanotime.R: Add tests
 	* inst/tinytest/cpp/nanotime_tests.cpp: Idem
 
+	* src/nanotime.cpp: New example wrapper
+	* man/NanotimeToNanotime.Rd: Documentation
+	* src/RcppExports.cpp: New example wrapper
+	* R/RcppExports.R: New example wrapper caller
 
-	* DESCRIPTION (Suggests): Add Suggests: for nanotime, extend Description:
+	* DESCRIPTION (Suggests): Add Suggests: for nanotime, extend
+	Description:
+
+	* src/int64.cpp: Correct one-char typo in documentation
+	* man/Int64toInt64.Rd: Ditto
 
 2023-09-16  Dirk Eddelbuettel  <edd@debian.org>
 

@@ -5,7 +5,7 @@
 //'
 //' This function takes an integer64-valued input vector, converts
 //' it to the equivalent \code{int64_t} vector in C++, displays each
-//' element after first adding one, and returns the modofied vector.
+//' element after first adding one, and returns the modified vector.
 //'
 //' @param vec An \code{integer64}-classed vector from R
 //' @return A modified \code{integer64} vector where each element

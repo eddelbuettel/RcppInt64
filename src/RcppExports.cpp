@@ -21,9 +21,21 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// NanotimeToNanotime
+Rcpp::NumericVector NanotimeToNanotime(Rcpp::NumericVector vec);
+RcppExport SEXP _RcppInt64_NanotimeToNanotime(SEXP vecSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type vec(vecSEXP);
+    rcpp_result_gen = Rcpp::wrap(NanotimeToNanotime(vec));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_RcppInt64_Int64toInt64", (DL_FUNC) &_RcppInt64_Int64toInt64, 1},
+    {"_RcppInt64_NanotimeToNanotime", (DL_FUNC) &_RcppInt64_NanotimeToNanotime, 1},
     {NULL, NULL, 0}
 };
 
