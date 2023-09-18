@@ -4,6 +4,7 @@
 [![CI](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml/badge.svg)](https://github.com/eddelbuettel/RcppInt64/actions/workflows/r2u.yaml)
 [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![CRAN](https://www.r-pkg.org/badges/version/RcppInt64)](https://cran.r-project.org/package=RcppInt64)
+[![r-universe](https://eddelbuettel.r-universe.dev/badges/RcppInt64)](https://eddelbuettel.r-universe.dev/RcppInt64)
 [![Dependencies](https://tinyverse.netlify.com/badge/RcppInt64)](https://cran.r-project.org/package=RcppInt64)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/rcppint64)](https://github.com/eddelbuettel/rcppint64)
 
@@ -23,8 +24,8 @@ different packages, and reorganizes them along with a proper unit tests.  The ke
 provided here can be included directly. Function to assert `integer64` source, convert to and from
 in both scalar and vector cases as well as a pair of `as<>()` and `wrap()` converters are provided.
 
-As our [nanotime package]() builds on the same `integer64` infrastructure, its bi-directional
-conversions between R and C++ are also supported.
+As our [nanotime package](https://github.com/eddelbuettel/nanotime) builds on the same `integer64`
+infrastructure, its bi-directional conversions between R and C++ are also supported.
 
 ## Examples
 
