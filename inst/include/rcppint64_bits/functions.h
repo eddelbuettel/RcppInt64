@@ -20,6 +20,7 @@
 #pragma once
 
 #include <Rcpp/Lightest>
+#include <cstdint>              		// for int64_t
 
 namespace Rcpp {
 
