@@ -1,8 +1,8 @@
 Package: RcppInt64
 Type: Package
 Title: 'Rcpp'-Based Helper Functions to Pass 'Int64' and 'nanotime' Values Between 'R' and 'C++'
-Version: 0.0.3
-Date: 2023-09-19
+Version: 0.0.4
+Date: 2023-12-09
 Authors@R: c(person(given = "Dirk", family = "Eddelbuettel",
                     role = c("aut", "cre"), email = "edd@debian.org",
                     comment = c(ORCID = "0000-0001-6419-907X")))

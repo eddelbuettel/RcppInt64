@@ -3,6 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppint64/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppint64/issues/#1}{##1}}
 
+\section{Changes in version 0.0.4 (2023-12-09)}{
+  \itemize{
+    \item The \code{cstdint} header is now included (closes \ghit{1}).
+  }
+}
+
 \section{Changes in version 0.0.3 (2023-09-19)}{
   \itemize{
     \item The \code{as<>()} and \code{wrap()} converters are now declared

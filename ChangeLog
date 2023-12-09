@@ -1,5 +1,7 @@
 2023-12-09  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Date, Version): Release 0.0.4
+
 	* inst/include/rcppint64_bits/functions.h: Include the cstdint header
 	to ensure int64_t is defined (with thanks to Sebastian Meyer)
 
