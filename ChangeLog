@@ -1,7 +1,9 @@
 2024-04-28  Dirk Eddelbuettel  <edd@debian.org>
 
-	* inst/include/rcppint64_bits/functions.h (toNanotime): Use Rf_asS4()
-	instead the 'not API' function SET_S4_OBJECT
+	* DESCRIPTION (Version, Date): Roll micro relase and date
+
+	* inst/include/rcppint64_bits/functions.h: Use Rf_asS4() instead of
+	the 'not API' function SET_S4_OBJECT
 
 2023-12-09  Dirk Eddelbuettel  <edd@debian.org>
 
