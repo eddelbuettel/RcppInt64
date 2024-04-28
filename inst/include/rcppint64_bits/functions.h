@@ -136,9 +136,9 @@ inline Rcpp::NumericVector toNanotime(const std::vector<int64_t>& v) {
     Rcpp::CharacterVector cl = Rcpp::CharacterVector::create("nanotime");
     cl.attr("package") = "nanotime";
 
+    Rf_asS4(n, TRUE, FALSE);
     n.attr(".S3Class") = "integer64";
     n.attr("class") = cl;
-    SET_S4_OBJECT(n);
 
     return(n);
 }
@@ -153,9 +153,9 @@ inline Rcpp::NumericVector toNanotime(const int64_t& v) {
     Rcpp::CharacterVector cl = Rcpp::CharacterVector::create("nanotime");
     cl.attr("package") = "nanotime";
 
+    Rf_asS4(n, TRUE, FALSE);
     n.attr(".S3Class") = "integer64";
     n.attr("class") = cl;
-    SET_S4_OBJECT(n);
 
     return(n);
 }
