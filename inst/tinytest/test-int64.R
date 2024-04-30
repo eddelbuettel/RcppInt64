@@ -26,3 +26,5 @@ expect_error(assertVector("a"))
 #expect_error(assertVector(1))
 expect_true(assertVector(as.integer64(1)))
 expect_true(assertVector(as.integer64(1:5)))
+
+expect_equal(justScalar(), as.integer64(123))

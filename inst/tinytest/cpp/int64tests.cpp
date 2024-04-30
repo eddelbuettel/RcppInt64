@@ -22,3 +22,9 @@ Rcpp::NumericVector plusOneScalar(SEXP scl) {
 bool assertVector(SEXP sxp) {
     return Rcpp::isInteger64(sxp);
 }
+
+// [[Rcpp::export]]
+Rcpp::NumericVector justScalar() {
+    int64_t v = 123;
+    return Rcpp::toInteger64(v);
+}
