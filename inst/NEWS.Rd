@@ -3,6 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppint64/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppint64/issues/#1}{##1}}
 
+\section{Changes in version 0.0.5 (2024-04-30)}{
+  \itemize{
+    \item Minor refactoring of internal code to not rely on \code{SET_S4_OBJECT}.
+  }
+}
+
 \section{Changes in version 0.0.4 (2023-12-09)}{
   \itemize{
     \item The \code{cstdint} header is now included (closes \ghit{1}).
