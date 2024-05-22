@@ -5,7 +5,7 @@
 [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![CRAN](https://www.r-pkg.org/badges/version/RcppInt64)](https://cran.r-project.org/package=RcppInt64)
 [![r-universe](https://eddelbuettel.r-universe.dev/badges/RcppInt64)](https://eddelbuettel.r-universe.dev/RcppInt64)
-[![Dependencies](https://tinyverse.netlify.com/badge/RcppInt64)](https://cran.r-project.org/package=RcppInt64)
+[![Dependencies](https://tinyverse.netlify.app/badge/RcppInt64)](https://cran.r-project.org/package=RcppInt64)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/rcppint64)](https://github.com/eddelbuettel/rcppint64)
 
 ### Motivation

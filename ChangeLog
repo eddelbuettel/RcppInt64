@@ -10,6 +10,10 @@
 	* inst/tinytest/test-int64.R: Ditto
 	* inst/tinytest/cpp/test-nanotime.R: Ditto
 
+2024-05-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Use tinyverse.netlify.app for dependency badge
+
 2024-04-30  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Release 0.0.5
