@@ -16,7 +16,7 @@ expect_equal(plusOneVector(v[1]), v[1]+1)
 
 v0 <- as.integer64()                            # length-0 vector
 expect_equal(length(plusOneVector(v0)), 0)
-expect_equivalent(class(plusOneVector(v0)), "nanotime")
+expect_true(class(plusOneVector(v0)) == "nanotime")
 
 expect_error(plusOneScalar("a"))				# cast error from character
 expect_equal(plusOneScalar(as.nanotime(1L)),  as.nanotime(2))
