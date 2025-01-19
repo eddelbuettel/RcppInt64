@@ -52,7 +52,8 @@ inline Rcpp::NumericVector toInteger64(const std::vector<int64_t>& v) {
 
     // transfers values 'keeping bits' (via memcpy) but changing type
     // using reinterpret_cast would get us a warning for casting
-    std::memcpy(n.begin(), v.data(), len * sizeof(double));
+    if (len > 0)
+        std::memcpy(n.begin(), v.data(), len * sizeof(double));
 
     // set the R class to 'integer64' so that this is not seen as a double
     n.attr("class") = "integer64";
@@ -86,7 +87,8 @@ inline std::vector<int64_t> fromInteger64(Rcpp::NumericVector v, bool check = tr
 
     // transfers values 'keeping bits' (via memcpy) but changing type
     // using reinterpret_cast would get us a warning for casting
-    std::memcpy(n.data(), v.begin(), len * sizeof(double));
+    if (len > 0)
+        std::memcpy(n.data(), v.begin(), len * sizeof(double));
 
     return n;
 }
@@ -131,7 +133,8 @@ inline bool isNanotime(Rcpp::NumericVector v) {
 inline Rcpp::NumericVector toNanotime(const std::vector<int64_t>& v) {
     size_t len = v.size();
     Rcpp::NumericVector n(len);
-    std::memcpy(n.begin(), v.data(), len * sizeof(double));
+    if (len > 0)
+        std::memcpy(n.begin(), v.data(), len * sizeof(double));
 
     Rcpp::CharacterVector cl = Rcpp::CharacterVector::create("nanotime");
     cl.attr("package") = "nanotime";
@@ -171,7 +174,8 @@ inline std::vector<int64_t> fromNanotime(Rcpp::NumericVector v, bool check = tru
 
     // transfers values 'keeping bits' (via memcpy) but changing type
     // using reinterpret_cast would get us a warning for casting
-    std::memcpy(n.data(), v.begin(), len * sizeof(double));
+    if (len > 0)
+        std::memcpy(n.data(), v.begin(), len * sizeof(double));
 
     return n;
 }
