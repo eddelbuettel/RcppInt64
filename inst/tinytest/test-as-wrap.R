@@ -21,3 +21,7 @@ expect_equal(plusOneSEXP(as.integer64(1L)),  as.integer64(2))
 expect_equal(plusOneSEXP(as.integer64(1)),   as.integer64(2))
 expect_equal(plusOneSEXP(as.integer64(-2L)), as.integer64(-1L))
 expect_equal(plusOneSEXP(v), v+1) 				# SEXP does vector too
+
+v0 <- as.integer64()                            # length-0 vector
+expect_equal(length(plusOneSEXP(v0)), 0)
+expect_equal(class(plusOneSEXP(v0)), "integer64")
