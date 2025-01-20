@@ -3,6 +3,13 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppint64/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppint64/issues/#1}{##1}}
 
+\section{Changes in version 0.0.6 (2025-xx-yy)}{
+  \itemize{
+    \item Correctly deal with zero-length vector (Chris Toney in \ghpr{4}
+    fixing \ghpr{3})
+  }
+}
+
 \section{Changes in version 0.0.5 (2024-04-30)}{
   \itemize{
     \item Minor refactoring of internal code to not rely on \code{SET_S4_OBJECT}.
