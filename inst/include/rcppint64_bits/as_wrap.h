@@ -88,7 +88,8 @@ namespace Rcpp {
 
         // transfers values 'keeping bits' (via memcpy) but changing type
         // using reinterpret_cast would get us a warning for casting
-        std::memcpy(n.data(), v.begin(), len * sizeof(double));
+        if (len > 0)
+            std::memcpy(n.data(), v.begin(), len * sizeof(double));
 
         return n;
     }
@@ -99,7 +100,8 @@ namespace Rcpp {
 
         // transfers values 'keeping bits' (via memcpy) but changing type
         // using reinterpret_cast would get us a warning for casting
-        std::memcpy(n.begin(), v.data(), len * sizeof(double));
+        if (len > 0)
+            std::memcpy(n.begin(), v.data(), len * sizeof(double));
 
         // set the R class to 'integer64' so that this is not seen as a double
         n.attr("class") = "integer64";
