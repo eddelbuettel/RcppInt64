@@ -3,6 +3,7 @@ if (!requireNamespace("nanotime", quietly=TRUE)) {
 }
 
 suppressMessages({
+    library(bit64)
     library(nanotime)
     library(RcppInt64)
 })
