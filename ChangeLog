@@ -1,3 +1,15 @@
+2025-01-19  Chris Toney  <jctoney@gmail.com>
+
+	* DESCRIPTION (Version, Date): Roll micro relase and date
+
+	* inst/include/rcppint64_bits/as_wrap.h: Make calls to std::memcpy()
+	conditional on input vector size > 0
+	* inst/include/rcppint64_bits/functions.h: Ditto
+
+	* inst/tinytest/test-as-wrap.R: Add tests for length-0 vector
+	* inst/tinytest/test-int64.R: Ditto
+	* inst/tinytest/cpp/test-nanotime.R: Ditto
+
 2024-04-30  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Release 0.0.5
