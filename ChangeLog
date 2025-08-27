@@ -1,3 +1,8 @@
+2025-08-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Add standard ci.yaml
+	* .github/workflows/r2u.yaml: Turn to opt-in only for now
+
 2025-01-19  Chris Toney  <jctoney@gmail.com>
 
 	* DESCRIPTION (Version, Date): Roll micro relase and date
