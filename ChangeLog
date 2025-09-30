@@ -1,3 +1,7 @@
+2025-09-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/r2u.yaml: Update r2u.yaml
+
 2025-08-26  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Add standard ci.yaml
