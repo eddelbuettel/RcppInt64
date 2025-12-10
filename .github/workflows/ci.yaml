@@ -15,6 +15,7 @@ jobs:
       matrix:
         include:
           - { name: container, os: ubuntu-latest, container: rocker/r2u4ci }
+          - { name: r-devel,   os: ubuntu-latest, container: rocker/drd }
           #- { name: macos,     os: macos-latest }
           - { name: ubuntu,    os: ubuntu-latest }
 

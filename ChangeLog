@@ -1,3 +1,7 @@
+2025-12-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Add r-devel to CI matrix
+
 2025-12-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: No longer need to select 'dev' version
