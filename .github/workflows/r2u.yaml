@@ -12,7 +12,7 @@ jobs:
     container:
       image: rocker/r2u:latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: SessionInfo
         shell: Rscript {0}
